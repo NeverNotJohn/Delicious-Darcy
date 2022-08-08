@@ -76,5 +76,4 @@ async def check_all_online(ctx):
 
 
 # Secret Super Client Code
-bot.run('OTQ5Mzg1MTgzMTQ3MjA4NzA0.YiJl2g.i8LBQ2RWRP4AJNIRwQZoUIPB5EI')
-client.run('OTQ5Mzg1MTgzMTQ3MjA4NzA0.YiJl2g.i8LBQ2RWRP4AJNIRwQZoUIPB5EI')
+# In external py file :)

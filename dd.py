@@ -4,6 +4,7 @@ from discord.ext import commands
 from asyncio import sleep
 import atexit
 import datetime
+from private import key
 
 # CLIENT:
 intents = discord.Intents.default()
@@ -76,4 +77,7 @@ async def check_all_online(ctx):
 
 
 # Secret Super Client Code
-# In external py file :)
+# In external py file :)... replace with your own discord bot key on the discord developer portal
+
+client.run(key.botKey)
+bot.run(key.botKey)

@@ -31,6 +31,12 @@ async def on_ready():
     dt_string = now.strftime(f"%d/%m/%Y %H:%M:%S")
     await testServer.send(f"\n \n ** Run time: {dt_string} * \n \n")
 
+# Auto change status
+@bot.event
+async def on_ready():
+    print("hello")
+
+
 # FIXME
 @bot.event # detect status change
 async def on_member_update(before, after):
@@ -79,5 +85,5 @@ async def check_all_online(ctx):
 # Secret Super Client Code
 # In external py file :)... replace with your own discord bot key on the discord developer portal
 
-client.run(key.botKey)
 bot.run(key.botKey)
+client.run(key.botKey)

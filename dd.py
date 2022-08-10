@@ -1,3 +1,4 @@
+from time import monotonic
 import discord
 from func import *
 from discord.ext import commands
@@ -25,17 +26,21 @@ print('running!')
 # INIT Message
 @bot.event
 async def on_ready():
+    print("Discord Connected!")
     testServer = DD_test()
 
     now = datetime.datetime.now()
     dt_string = now.strftime(f"%d/%m/%Y %H:%M:%S")
     await testServer.send(f"\n \n ** Run time: {dt_string} * \n \n")
 
-# Auto change status
-@bot.event
-async def on_ready():
-    print("hello")
+    # Auto change status
+    readyTime = monotonic()
+    while True:
+        runTime = int((monotonic() - readyTime) / 60)
+        await bot.change_presence(activity = discord.Activity(type = discord.ActivityType.watching, name = f"{NUM()} users for {runTime} minutes"))
+        await sleep(20)
 
+# CANNOT HAVE MULTIPLE ON_READY()
 
 # FIXME
 @bot.event # detect status change

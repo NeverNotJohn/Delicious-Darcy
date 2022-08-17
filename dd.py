@@ -90,6 +90,7 @@ async def genRank(ctx):
     for i in rankedList:
         sortedList.append(i)
         print("Sort function here based on dictionary attributes")
+        #does git detect comments?
     await ctx.send(sortedList)
 
 

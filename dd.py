@@ -83,6 +83,14 @@ async def genshinID(ctx, user):
     userGenID = user
     await ctx.send(userGenID)
 
+@bot.command()
+async def genRank(ctx):
+    rankedList = 2 # dictionaries w/ id and level
+    sortedList = []
+    for i in rankedList:
+        sortedList.append(i)
+        print("Sort function here based on dictionary attributes")
+    await ctx.send(sortedList)
 
 
 

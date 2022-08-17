@@ -76,6 +76,12 @@ async def check_all_online(ctx):
     for i in bot.users:
         print(i.id)
 
+" Do something with genshin "
+
+@bot.command()
+async def genshinID(ctx, user):
+    userGenID = user
+    await ctx.send(userGenID)
 
 
 
